@@ -1,0 +1,155 @@
+body {
+	background-color: #232323;
+}
+/******************** newWorld ************************/
+#topBar .rightFloat {
+	color: #787b83;
+}
+#topBar #首页,#topBar #登录 {
+	color: #e74f4d;
+}
+#newWorld {
+	background-color: #ffffff;
+}
+#timeOfNewLife {
+	background-color: #ffffff;
+	background-image: url(../images/timeOfNewLife.jpg);
+	background-repeat: no-repeat;
+}
+#开始体验 {
+	color: #fffdfd;
+}
+#timeOfNewLife input {
+	color: #fffdfd;
+	background-color: #e74f4d;
+}
+#未标题Bar {
+	background-color: #ffffff;
+}
+.未标题BarText {
+	color: #767777;
+}
+/******************** aboutNewWorld ************************/
+#aboutNewWorld {
+	background-color: #edecec;
+}
+#aboutNewWorldText {
+	color: #323333;
+	opacity: 0.5;
+}
+#上海活动 {
+	background-color: #F7F7F7;
+}
+#searchMap {
+	color: #ffffff;
+	background-image: url(../images/查找地图.jpg);
+	background-repeat: no-repeat;
+}
+#searchMap input {
+	color: #ffffff;
+	background-color: #be4e48;
+}
+.select_box {
+	background-color: #fff;
+	color: #a8aaaa;
+}
+.select_box div {
+	background-color: #be4e48;
+	color: #fff;
+}
+.select_box ul {
+	background-color: #E3E3E5;
+}
+.select_box #selected {
+	background-color: #be4e48;
+	color: #fff;
+}
+#北京 {
+	background-image: url(../images/北京bg.png);
+	background-repeat: no-repeat;
+}
+#上海 {
+	background-image: url(../images/上海bg.png);
+	background-repeat: no-repeat;
+}
+#深圳 {
+	background-image: url(../images/深圳bg.png);
+	background-repeat: no-repeat;
+}
+#香港 {
+	background-image: url(../images/香港bg.png);
+	background-repeat: no-repeat;
+}
+.blackText {
+	color: #545454;
+}
+.grayText {
+	color: #a0a19f;
+}
+/******************** 西装部分 ************************/
+#西装部分 {
+	background-color: #ffffff;
+}
+#西装背景 {
+	background-image: url(../images/西装背景.jpg);
+	background-repeat: no-repeat;
+}
+#新世界TIME,#新世界北京 {
+	color: #ffffff;
+}
+#更多详情 input {
+	color: #e5676a;
+	background-color: #ffffff;
+}
+#redNew {
+	color: #ffffff;
+	background-color: #e74f4d;
+}
+#redNew input {
+	color: #ffffff;
+	background-color: #e74f4d;
+}
+#whiteNew input {
+	color: #e74f4d;
+	background-color: #ffffff;
+}
+#yellowClothes {
+	background-image: url(../images/yellowClothes.jpg);
+	background-repeat: no-repeat;
+}
+#西装部分 #whiteNew div {
+	border-color: #ababaa;
+}
+/******************** volunteer ************************/
+#volunteer {
+	background-color: #ffffff;
+}
+#titleText {
+	color: #aaaaaa;
+}
+#成为 {
+	color: #323333;
+}
+#right input,#right textarea {
+	color: #777374;
+	background-color: #ececee;
+}
+#right input[type="submit"]  {
+	color: #323333;
+}
+/******************** 联系我们 ************************/
+#联系我们 {
+	background-color: #32363f;
+	color: #ffffff;
+}
+#联系我们 input[type="email"] {
+	color: #b0b0b0;
+}
+#联系我们 input[type="submit"] {
+	color: #f7f7f8;
+	background-color: #6f7178;
+}
+#footer {
+	color: #ffffff;
+	background-color: #2f2f38;
+}
