@@ -1,0 +1,9 @@
+div {
+	background-color: #eee;
+}
+#groupName,#groupIntroduce,#personalLogo {
+	background-color: #FFFFFF;
+}
+#name {
+	background-color: inherit;
+}
