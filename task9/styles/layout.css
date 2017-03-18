@@ -1,0 +1,445 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+body > div {
+	width: 1280px;
+	margin: 0 auto;
+}
+.floatRight {
+	float: right;
+}
+.floatLeft {
+	float: left;
+}
+.clearFloat {
+	clear: both;
+}
+header,article,footer,nav,table {
+	display: block;
+}
+/* 内边距 边框 不影响 div 的大小 */
+div,header {
+	box-sizing: border-box;
+}
+/*---------------------- hearder -----------------------*/
+header {
+	padding: 10px 40px;
+}
+#logo {
+	padding: 0px 10px;
+}
+.circle-textbox {
+	width: 315px;
+	height: 30px;
+	border-radius: 15px;
+	border: 0;
+	padding: 5px 20px;
+	margin: 5px 0;
+}
+#enter {
+	padding: 10px 50px 10px 20px;
+}
+/*---------------------- leftBar -----------------------*/
+#leftBar {
+	width: 20%;
+}
+.box-1 {
+	padding: 20px 40px;
+}
+#circle-big {
+	width: 54px;
+	height: 54px;
+	border: 1px solid #bababe;
+	border-radius: 27px;
+	position: relative;
+	box-sizing: content-box;
+}
+#circle-small {
+	width: 46px;
+	height: 46px;
+	border-radius: 23px;
+	position: absolute;
+	top: 27px;
+	left: 27px;
+	margin-top: -23px;
+	margin-left: -23px;
+	box-sizing: content-box;
+}
+#ABC123 {
+	padding: 20px;
+	margin-left: 54px;
+}
+#收藏 {
+	padding-top: 15px;
+	padding-left: 20px;
+}
+#vertical-string {
+	border-left: 2px solid #313545;
+	padding-left: 30px;
+	margin-left: 30px;
+}
+ul {
+	padding: 0;
+	margin: 0;
+	list-style-position: inside;
+}
+ul li {
+	padding: 20px 0;
+	padding-left: 40px;
+}
+ul ul li {
+	padding: 10px 0;
+	padding-left: 25px;
+}
+ul ul ul li {
+	padding: 10px 0;
+	padding-left: 40px;
+} 
+#li-1-2-2,#li-1-3 {
+	padding-bottom: 0;
+}
+#个人报表 {
+	padding-top: 10px;
+}
+#li-1-1,#li-1-2-1 {
+	padding-top: 20px;
+}
+/*---------------------- main -----------------------*/
+#main {
+	width: 80%;
+	padding-bottom: 160px;
+}
+#topBar {
+	padding: 10px 30px;
+}
+
+/* first */
+#first {
+	margin: 20px 60px;
+	margin-bottom: 0;
+	box-shadow: -1px -1px #cacdd1;
+	border-radius: 1px;
+	padding: 15px 30px;
+}
+.marginTop {
+	margin-top: 5px;
+}
+.selectBox {
+	border: 1px solid #aaaaaa;
+	padding: 5px;
+	width: 70px;
+	display: inline-block;
+	margin-left: 10px;
+}
+.width120 {
+	width: 120px;
+}
+.selectBox img {
+	float: right;
+	margin-top: 6px;
+}
+#双方 {
+	width: 188px;
+	margin-left: 40px;
+}
+#换 {
+	margin-top: -50px;
+}
+#日期 {
+	margin-left: 30px;
+}
+#日期 .selectBox {
+	margin-right: 10px;
+}
+input[type=button] {
+	border: 0;
+	padding: 5px 10px;
+	border-radius: 3px;
+	margin: 20px;
+}
+
+/* second */
+#second {
+	margin: 10px 60px;
+	margin-bottom: 0;
+}
+#second > div {
+	margin-right: 1%;
+	height: 65px;
+	box-shadow: -1px -1px #cacdd1;
+	border-radius: 1px;
+}
+#second .clearFloat {
+	height: 0;
+}
+#second .左右箭头 {
+	width: 3%;
+}
+.numberDiv {
+	padding: 10px 25px;
+	width: 12%;
+}
+#blueTopBorder {
+	border-top: 3px solid #4388c9;
+}
+#second #历史查询 {
+	padding: 0 19px;
+	margin-right: 0;
+	width: 14%;
+}
+
+/* third */
+#third {
+	margin: 20px 60px;
+	margin-bottom: 0;
+}
+#third [id|="成交量"] {
+	display: inline-block;
+	padding: 10px;
+	box-shadow: -1px -1px #cacdd1;
+	margin-top: 5px;
+	margin-right: 30px; 
+	border-radius: 1px;
+	width: 199px;
+	height: 70px;
+}
+[id|="成交量"] .floatRight {
+	width: 60px;
+	height: 45px;
+}
+#成交量-1 {
+	border-left: 3px solid #43b29d;
+}
+#成交量-2 {
+	border-left: 3px solid #388ac1;
+}
+#成交量-3 {
+	border-left: 3px solid #cf4a36;
+}
+#third #成交量-4 {
+	margin-right: 0;
+	border-left: 3px solid #e2cd47;
+}
+.tableBox {
+	margin-top: 15px;
+	box-shadow: -1px -1px #cacdd1;
+	border-radius: 5px;
+	border: 1px solid #cacdd1;
+}
+.tableBox .title {
+	padding: 10px 20px;
+	border-bottom: 1px solid #cacdd1;
+}
+.tableBox .container {
+	padding: 15px 20px 20px 30px;
+}
+#第一组项目-1 {
+	width: 530px;
+	margin-left: 60px;
+}
+.项目 {
+	width: 85px;
+	height: 30px;
+	margin-right: 5px;
+}
+#项目一 {
+	border: 1px solid #cacdd1;
+}
+#table {
+	padding: 30px 40px 40px 40px;
+	border: 1px solid #cacdd1;
+	border-radius: 3px;
+	box-shadow: 1px 1px #cacdd1;
+	margin-top: 30px;
+}
+#第一组项目-1 table {
+	border-collapse: collapse;
+}
+#第一组项目-1 table td {
+	border: 1px solid #cacdd1;
+	width: 100px;
+	height: 30px;
+	box-sizing: border-box;
+}
+#第一组项目-2 {
+	width: 350px;
+	margin-right: 60px;
+}
+#第一组项目-2 table {
+	margin: 15px 35px 43px 35px;
+	border-collapse: separate;
+	border-spacing: 0;
+}
+#第一组项目-2 table #c1 {
+	width: 95px;
+
+}
+#第一组项目-2 table #c2 {
+	width: 185px;
+}
+#第一组项目-2 table td {
+	padding-left: 15px;
+}
+#第一组项目-2 table .topBorder {
+	border-top: 1px solid #aaaaaa;
+}
+#第一组项目-2 table .rightBorder {
+	border-right: 1px solid #aaaaaa;
+}
+#第一组项目-2 table .bottomBorder {
+	border-bottom: 1px solid #aaaaaa;
+}
+#该项目 {
+	height: 125px;
+}
+#第一组项目-2 #遵守协议 {
+	padding: 5px 0;
+	box-sizing: border-box;
+}
+#第一组项目-2 input {
+	margin: 0;
+	padding: 0;
+}
+input[type="checkbox"] {
+	display: none;
+}
+label[for="checkboxOne"] {
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	position: relative;
+	top: 2px;
+	margin-right: 5px;
+}
+label[for="checkboxOne"]:after {
+	content: '';
+	display: inline-block;
+	width: 8px;
+	height: 4px;
+	opacity: 0;
+	border: 1px solid #323333;
+	border-top: none;
+	border-right: none;
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 3px;
+	left: 1px;
+}
+label[for="checkboxOne"]:hover::after {
+	opacity: 0.5;
+}
+input[id="checkboxOne"]:checked + label[for="checkboxOne"]:after {
+	opacity: 1;
+}
+#遵守协议 input[type="button"] {
+	width: 50px;
+	height: 25px;
+}
+#日历 {
+	margin-left: 60px;
+	width: 350px;
+}
+#日历 .container {
+	padding: 10px 20px;
+}
+#日历 select,#日历 input {
+	height: 20px;
+}
+#日历 #div308 {
+	width: 308px;
+}
+#日历 #select65 {
+	width: 65px;
+}
+#日历 #select85 {
+	width: 85px;
+}
+#日历 #select75 {
+	width: 75px;
+}
+#日历 input {
+	margin: 0;
+	border: 1px solid #838383;
+	padding: 0;
+	border-radius: 0;
+	width: 65px;
+}
+#日历 table {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-collapse: collapse;
+}
+#日历 table td {
+	width: 44px;
+	height: 43px;
+}
+#日历 table .firstLine td {
+	border-top: 1px solid #a9cfec;
+	height: 30px;
+}
+#日历 table .secondLine td {
+	border-top: 1px solid #aaaaaa;
+}
+#日历 table .yellowBorder {
+	border: 1px solid #f4c21c;
+	padding: 5px 0;
+	display: block;
+}
+#汽车行业 {
+	margin-right: 60px;
+}
+#汽车行业 table {
+	margin: 15px 30px;
+	border-collapse: collapse;
+}
+#汽车行业 table td {
+	border: 1px solid #aaaaaa;
+	padding: 5px 0;
+}
+#汽车行业 table div {
+	width: 170px;
+	height: 5px;
+	display: inline-block;
+	margin-left: 20px;
+	position: relative;
+}
+#汽车行业 table [id |= "td"] {
+	margin: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#汽车行业 table #td-1 {
+	width: 140px;
+}
+#汽车行业 table #td-2 {
+	width: 120px;
+}
+#汽车行业 table #td-3 {
+	width: 100px;
+}
+#汽车行业 table #td-4 {
+	width: 95px;
+}
+#汽车行业 table #td-5 {
+	width: 85px;
+}
+#汽车行业 table #td-6 {
+	width: 80px;
+}
+#汽车行业 table #td-7 {
+	width: 75px;
+}
+#汽车行业 table #td-8 {
+	width: 65px;
+}
+#汽车行业 table #td-9 {
+	width: 60px;
+}
+#汽车行业 table #td-10 {
+	width: 55px;
+}
+
+
+
