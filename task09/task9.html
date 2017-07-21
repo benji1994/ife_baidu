@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>任务九：使用HTML/CSS实现一个复杂页面</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="styles/basic.css" />
+	</head>
+	<body>
+		<div>
+			<header>
+				<img id="logo" class="img" src="images/logo.png" />
+				<div id="enter" class="floatRight">
+					<img class="img" src="images/登录.png" />
+					登录
+				</div>
+				<div class="circle-textbox floatRight">
+					<img class="img" src="images/放大镜.png" />
+				</div>
+			</header>
+
+			<div id="bgcolor">
+			<div id="leftBar" class="floatLeft">
+				<div class="box-1">
+					<div id="circle-big" class="floatLeft">
+						<div id="circle-small"></div>
+					</div>
+					<div id="ABC123">ABC123</div>
+					<div id="收藏">
+						<div class="floatLeft 收藏">
+							<span>110</span><br />收藏
+						</div>
+						<div id="vertical-string" class="floatLeft 收藏">
+				  			<span>313</span><br />粉丝
+						</div>
+						<div class="clearFloat"></div>
+					</div>
+				</div>
+				<div>
+					<ul>
+						<li id="个人报表">&nbsp;个人报表
+							<ul>
+								<li id="li-1-1">&nbsp;文件一</li>
+								<li id="li-1-2">&nbsp;文件二
+									<ul>
+										<li id="li-1-2-1">&nbsp;文档1</li>
+										<li id="li-1-2-2">&nbsp;文档2</li>
+									</ul>
+								</li>
+								<li id="li-1-3">&nbsp;文件三</li>
+							</ul>
+						</li>
+						<li>&nbsp;个人收藏</li>
+						<li id="我的分享">&nbsp;我的分享</li>
+						<li>&nbsp;图库</li>
+						<li>&nbsp;成长记录</li>
+						<li id="账户信息">&nbsp;账户信息</li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="main" class="floatLeft">
+				<div id="topBar">
+					C站 / 个人报表 / 文件一 / <span>文档一</span>
+				</div>
+			
+				<div id="first">
+					<div class="floatLeft marginTop">
+						查询项
+						<div class="selectBox">
+							第一项
+							<img class="img" src="images/下拉箭头.png" />
+						</div>
+					</div>
+					<div class="floatLeft" id="双方">
+						<div class="marginTop">
+							买方
+							<div class="selectBox width120">
+								小A
+								<img class="img" src="images/下拉箭头.png" />
+							</div>
+						</div>
+						<div class="marginTop">
+							卖方
+							<div class="selectBox width120">
+								小C
+								<img class="img" src="images/下拉箭头.png" />
+							</div>
+						</div>
+						<img id="换" class="floatRight" src="images/换.png" />
+					</div>
+					<div class="floatLeft" id="日期">
+						<div class="marginTop">
+							日期
+							<div class="selectBox width120">
+								2016-04-01
+							</div>
+							总耗时
+							<div class="selectBox">
+								8 天
+								<img class="img" src="images/下拉箭头.png" />
+							</div>
+						</div>
+						<div class="marginTop">
+							人数
+							<div class="selectBox">
+								10 人
+								<img class="img" src="images/下拉箭头.png" />
+							</div>
+							成交项
+							<div class="selectBox width120">
+								10 项
+								<img class="img" src="images/下拉箭头.png" />
+							</div>
+						</div>
+					</div>
+					<input type="button" value="搜索">
+					<div class="clearFloat"></div>
+				</div>
+				
+				<div id="second">
+					<div class="左右箭头 floatLeft">
+						<img src="images/左箭头.png" />
+					</div>
+					<div id="blueTopBorder" class="floatLeft numberDiv">
+						10:00 am<br />
+						<span class="dollar">￥</span><span class="yuan">1200</span>
+					</div>
+					<div class="floatLeft numberDiv">
+						11:00 am<br />
+						<span class="dollar">￥</span><span class="yuan">1300</span>
+					</div>
+					<div class="floatLeft numberDiv">
+						12:00 am<br />
+						<span class="dollar">￥</span><span class="yuan">1200</span>
+					</div>
+					<div class="floatLeft numberDiv">
+						01:00 pm<br />
+						<span class="dollar">￥</span><span class="yuan">1400</span>
+					</div>
+					<div class="floatLeft numberDiv">
+						02:00 pm<br />
+						<span class="dollar">￥</span><span class="yuan">1500</span>
+					</div>
+					<div class="floatLeft numberDiv">
+						03:00 pm<br />
+						<span class="dollar">￥</span><span class="yuan">1800</span>
+					</div>
+					<div class="左右箭头 floatLeft">
+						<img src="images/右箭头.png" />
+					</div>
+					<div class="floatLeft" id="历史查询">
+						<img src="images/历史查询.png" />
+						&nbsp;历史查询
+					</div>
+					<div class="clearFloat"></div>
+				</div>
+			
+				<div id="third">
+					<div id="caption">2016年4月份统计</div>
+					<div id="成交量-1">
+						<div class="floatRight"></div>
+						133311<br />
+						<span>成交量</span>
+					</div>
+					<div id="成交量-2">
+						<div class="floatRight"></div>
+						133311<br />
+						<span>成交量</span>
+					</div>
+					<div id="成交量-3">
+						<div class="floatRight"></div>
+						133311<br />
+						<span>成交量</span>
+					</div>
+					<div id="成交量-4">
+						<div class="floatRight"></div>
+						133311<br />
+						<span>成交量</span>
+					</div>
+				</div>
+
+				<div id="第一组项目-2" class="tableBox floatRight">
+					<div class="title">第一组项目</div>
+					<div>
+						<table>
+							<colgroup>
+								<col id="c1"><col id="c2">
+							</colgroup>
+							<tr>
+								<td colspan="2">
+									<span>标题</span>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									项目报表三
+								</td>
+							</tr>
+							<tr>
+								<td class="topBorder rightBorder">
+									<span>价格</span>
+								</td>
+								<td class="topBorder">
+									<span>负责人</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="rightBorder bottomBorder">
+									158
+								</td>
+								<td class="bottomBorder">
+									小A
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<span>详细描述</span>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" id="该项目">
+									该项目目前负责人是......
+								</td>
+							</tr>
+							<tr>
+								<td id="遵守协议" class="topBorder" colspan="2">
+									<input type="checkbox" id="checkboxOne" name="">
+									<label for="checkboxOne"></label>
+									<span>遵守保密协议</span>
+									<input type="button" value="搜索" class="floatRight" name="">
+								</td>
+								<!--<td id="searchButton" class="topBorder">
+									<input type="button" value="搜索" name="">
+								</td>-->
+							</tr>
+						</table>
+					</div>
+				</div>
+
+				<div id="第一组项目-1" class="tableBox">
+					<div class="title">第一组项目</div>
+					<div class="container">
+						<div id="项目一" class="项目 floatLeft">项目一</div>
+						<div class="项目 floatLeft">项目一</div>
+						<div class="项目 floatLeft">项目一</div>
+						<div class="项目 floatLeft">项目一</div>
+						<div class="项目 floatLeft">项目一</div>
+						<div id="table">
+							<table>
+								<tr>
+									<td id="购买材料一-1">购买材料一</td>
+									<td>购买材料一</td>
+									<td>购买材料一</td>
+									<td>购买材料一</td>
+								</tr>
+								<tr>
+									<td>购买材料二</td>
+									<td>购买材料二</td>
+									<td>购买材料二</td>
+									<td>购买材料二</td>
+								</tr>
+								<tr>
+									<td>购买材料四</td>
+									<td>购买材料四</td>
+									<td>购买材料四</td>
+									<td>购买材料四</td>
+								</tr>
+								<tr>
+									<td>购买材料六</td>
+									<td>购买材料六</td>
+									<td>购买材料六</td>
+									<td>购买材料六</td>
+								</tr>
+								<tr>
+									<td>购买材料十三</td>
+									<td>购买材料十三</td>
+									<td>购买材料十三</td>
+									<td>购买材料十三</td>
+								</tr>
+								<tr>
+									<td>购买材料二十</td>
+									<td>购买材料二十</td>
+									<td>购买材料二十</td>
+									<td>购买材料二十</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<div class="clearFloat"></div>
+
+				<div id="汽车行业" class="tableBox floatRight">
+					<div class="title">
+						汽车行业品牌榜
+					</div>
+					<table>
+						<tr>
+							<td width="70px">排名</td>
+							<td width="90px">品牌</td>
+							<td width="290px">搜索指数</td>
+						</tr>
+						<tr id="tr-2">
+							<td>1</td>
+							<td>大众</td>
+							<td>
+								48912001
+								<div><div id="td-1"></div></div>
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>丰田</td>
+							<td>
+								29307333
+								<div><div id="td-2"></div></div>
+							</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>奥迪</td>
+							<td>
+								23139070
+								<div><div id="td-3"></div></div>
+							</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>本田</td>
+							<td>
+								22885564
+								<div><div id="td-4"></div></div>
+							</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>福特</td>
+							<td>
+								22324792
+								<div><div id="td-5"></div></div>
+							</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>宝马</td>
+							<td>
+								21444077
+								<div><div id="td-6"></div></div>
+							</td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td>现代</td>
+							<td>
+								20114969
+								<div><div id="td-7"></div></div>
+							</td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td>起亚</td>
+							<td>
+								19251680
+								<div><div id="td-8"></div></div>
+							</td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td>奔驰</td>
+							<td>
+								19172837
+								<div><div id="td-9"></div></div>
+							</td>
+						</tr>
+						<tr>
+							<td>10</td>
+							<td>别克</td>
+							<td>
+								18544027
+								<div><div id="td-10"></div></div>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div id="日历" class="tableBox">
+					<div class="title">日历</div>
+					<div class="container">
+						<div id="div308px">
+							<select id="select65">
+								<option>2016年</option>
+							</select>
+							<select id="select85">
+								<option>4月</option>
+							</select>
+							<select id="select75">
+								<option>标注日期</option>
+							</select>
+							<input class="floatRight" type="button" value="返回今天">
+						</div>
+						<table>
+							<tr class="firstLine">
+								<td>一</td>
+								<td>二</td>
+								<td>三</td>
+								<td>四</td>
+								<td>五</td>
+								<td>六</td>
+								<td>日</td>
+							</tr>
+							<tr class="secondLine">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>
+									<span>1</span>
+									<br />
+									<span class="redFont">愚人节</span>
+								</td>
+								<td>
+									<span class="redFont">2</span>
+									<br />
+									<span>廿五</span>
+								</td>
+								<td>
+									<span class="redFont">3</span>
+									<br />
+									<span>廿六</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span>4</span>
+									<br />
+									<span>廿七</span>
+								</td>
+								<td>
+									<span>5</span>
+									<br />
+									<span class="redFont">清明</span>
+								</td>
+								<td>
+									<span>6</span>
+									<br />
+									<span>廿九</span>
+								</td>
+								<td>
+									<span>7</span>
+									<br />
+									<span>三月</span>
+								</td>
+								<td>
+									<span>8</span>
+									<br />
+									<span>初二</span>
+								</td>
+								<td> 
+									<span class="yellowBorder">
+									<span class="redFont">9</span>
+									<br />
+									<span>初三</span>
+									</span>
+								</td>
+								<td>
+									<span class="redFont">10</span>
+									<br />
+									<span>初四</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span>11</span>
+									<br />
+									<span>初五</span>
+								</td>
+								<td>
+									<span class="yellowBorder"><span>12</span>
+									<br />
+									<span>初六</span></span>
+								</td>
+								<td>
+									<span>13</span>
+									<br />
+									<span>初七</span>
+								</td>
+								<td>
+									<span>14</span>
+									<br />
+									<span>初八</span>
+								</td>
+								<td>
+									<span>15</span>
+									<br />
+									<span>初八</span>
+								</td>
+								<td>
+									<span class="redFont">16</span>
+									<br />
+									<span>初十</span>
+								</td>
+								<td>
+									<span class="redFont">17</span>
+									<br />
+									<span>十一</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span>18</span>
+									<br />
+									<span>十二</span>
+								</td>
+								<td>
+									<span class="yellowBorder"><span>19</span>
+									<br />
+									<span>十三</span></span>
+								</td>
+								<td>
+									<span>20</span>
+									<br />
+									<span>十四</span>
+								</td>
+								<td>
+									<span>21</span>
+									<br />
+									<span>十五</span>
+								</td>
+								<td>
+									<span>22</span>
+									<br />
+									<span>十六</span>
+								</td>
+								<td>
+									<span class="redFont">23</span>
+									<br />
+									<span>十七</span>
+								</td>
+								<td>
+									<span class="redFont">24</span>
+									<br />
+									<span>十八</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span>25</span>
+									<br />
+									<span>十九</span>
+								</td>
+								<td>
+									<span>26</span>
+									<br />
+									<span>廿十</span>
+								</td>
+								<td>
+									<span>27</span>
+									<br />
+									<span>廿一</span>
+								</td>
+								<td>
+									<span>28</span>
+									<br />
+									<span>廿二</span>
+								</td>
+								<td>
+									<span>29</span>
+									<br />
+									<span>廿三</span>
+								</td>
+								<td>
+									<span class="redFont">30</span>
+									<br />
+									<span>廿四</span>
+								</td>
+								<td></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+
+				<div class="clearFloat"></div>
+			</div>
+
+			<div class="clearFloat"></div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,81 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	//box-sizing: border-box;
+}
+body {
+	padding: 20px;
+	margin: 0;
+}
+table {
+	margin: auto;
+	border-collapse: separate;
+	border-spacing: 2px;
+}
+input {
+	margin: 40px auto;
+	display: block;
+	transition: width 2s;
+	width: 100px;
+}
+input:focus {
+	width: 200px;
+	border: 1px solid #7BADEA; 
+}
+.DIV {
+	width: 300px;
+	height: 150px;
+	margin: auto;
+	border: 1px solid gray;
+	position: relative;
+}
+#flexDiv {
+	height: 150px;
+	margin: 0;
+}
+@keyframes myfrist {
+	from{
+		width: 0px;
+	}
+	to {
+		width: 300px;
+	}
+}
+.green {
+	animation: myfrist 3s;
+	width: 300px;
+}
+@keyframes mysecond {
+	from{
+		width: 0px;
+	}
+	to {
+		width: 150px;
+	}
+}
+.blue {
+	animation: mysecond 3s;
+	width: 150px;
+}
+@keyframes mythird {
+	from{
+		width: 0px;
+	}
+	to {
+		width: 300px;
+	}
+}
+.blue2 {
+	animation: mythird 3s;
+	width: 300px;
+}
+.button {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.button div {
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+}

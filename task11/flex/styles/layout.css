@@ -1,0 +1,105 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+.box {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+}
+#box1 .item1 {
+	width: 30%;
+}
+#box1 .item2 {
+	width: 70%;
+	padding-left: 10%; 
+}
+#box2 {
+	padding: 0;
+}
+#box2 > div {
+	width: 20%;
+	padding: 10px;
+}
+#box2 .item2 {
+	border-bottom: 2px solid #00c7d6;
+}
+img {
+	width: 100%;
+}
+#box3 {
+	padding-bottom: 0px;
+}
+#box3 img {
+	width: 10%;
+	height: 10%;
+}
+#box4 {
+	padding-top: 5px;
+}
+#box4 > div {
+	width: 10%;
+}
+.border {
+	border: 1px solid #dedede;
+	margin: 0 10px;
+}
+#box5 div {
+	padding: 10px 25px;
+}
+#box5 img {
+	width: 100%;
+}
+#box5 h5 {
+	padding: 5px;
+}
+#box5 .item2 {
+	border-left: 2px solid #dedede;
+	border-right: 2px solid #dedede;
+}
+.border-fuild {
+	border: 3px solid #dedede;
+}
+.mokuai {
+	padding:10px;
+}
+#box6 {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-between;
+	align-content: space-between;
+	height: 195px;
+}
+#box6 img {
+	width: 114px;
+}
+#box6 .text {
+	padding: 10px 30px;
+}
+#box7 {
+	justify-content: 
+}
+#box7 img {
+	width: 35%;
+	height: 30%;
+}
+#box7-1 {
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.border-fuild-thin {
+	border: 1px solid #dedede;
+}
+.capDiv {
+	margin: 10px;
+}
+#box8 {
+	padding: 0 10px;
+}
+#box8 img {
+	width: 32%;
+	height: 2%;
+}

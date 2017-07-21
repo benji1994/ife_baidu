@@ -1,0 +1,119 @@
+body {
+	font-size: 100%;
+	font-family:  "黑体","Helvetica","Arial",sans-serif;
+}
+/*消除 img 图片的下边距*/
+.img {
+	vertical-align: top;
+}
+body > div {
+	font: 12px 黑体;
+}
+/*---------------------- leftBar -----------------------*/
+#ABC123 {
+	font-size: 18px;
+}
+.收藏 {
+	text-align: center;
+	font: 12px/0.7 宋体;
+}
+.收藏 span {
+	font: 16px 黑体;
+}
+ul li {
+	list-style-image: url(../images/star.png);
+}
+#个人报表 {
+	list-style-image: url(../images/个人报表logo.png);
+}
+#我的分享 {
+	list-style-image: url(../images/我的分享logo.png);
+}
+#账户信息 {
+	list-style-image: url(../images/账户信息logo.png);
+}
+ul ul li {
+	list-style-image: url(../images/文件logo.png);
+}
+#li-1-2 {
+	list-style-image: url(../images/文件2logo.png);
+}
+ul ul ul li {
+	list-style-image: url(../images/文档logo.png);
+}
+#li-1-2-1 {
+	list-style-image: url(../images/文档1logo.png);
+}
+/*---------------------- main -----------------------*/
+input[type=button] {
+	font: 12px 黑体;
+}
+#second > div {
+	font: 12px 微软雅黑;
+}
+#second .左右箭头 {
+	text-align: center;
+	line-height: 65px;
+}
+#second img {
+	vertical-align: middle;
+}
+.dollar {
+	font: bold 13px 微软雅黑;
+}
+.yuan {
+	font: 21px 微软雅黑;
+}
+#second #历史查询 {
+	line-height: 65px;
+}
+#third #caption {
+	font: 12px 微软雅黑;
+}
+[id|="成交量"] span {
+	font: 10px 黑体;
+}
+.tableBox .title {
+	font: 12px 微软雅黑;
+}
+.项目 {
+	vertical-align: middle;
+	text-align: center;
+	font: 12px/30px 微软雅黑;
+}
+#第一组项目-1 table {
+	font: 12px 宋体;
+}
+#第一组项目-1 table td {
+	text-align: center;
+}
+#第一组项目-2 {
+	font: 12px 微软雅黑;
+}
+#该项目 {
+	vertical-align: top;
+}
+#第一组项目-2 input {
+	vertical-align: middle;
+}
+#遵守协议 input[type="button"] {
+	font: 12px/25px 黑体;
+	text-align: center;
+}
+#日历 select,#日历 input {
+	font: 12px 黑体;
+}
+#日历 #select85 {
+	text-align: center;
+}
+#日历 table {
+	font: 12px 黑体;
+	text-align: center;
+}
+#汽车行业 table {
+	font: 12px 黑体;
+	text-align: center;
+}
+#汽车行业 table tr:first-child {
+	font: 14px 黑体;
+}

@@ -1,0 +1,10 @@
+.row {
+	padding: 10px;
+}
+[class *= col-] {
+	padding: 10px;
+}
+.block {
+	border: 1px solid #979797;
+	height: 50px;
+}

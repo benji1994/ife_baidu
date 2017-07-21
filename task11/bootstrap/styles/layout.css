@@ -1,0 +1,98 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+.row {
+	padding: 10px;
+}
+.title {
+	margin: 0;
+}
+.title .col-xs-4 {
+	padding: 0;
+}
+.title .col-xs-10 {
+	padding-left: 10%;
+}
+.nav {
+	padding: 0;
+}
+.nav [class *= "col"]{
+	width: 20%;
+	padding: 10px;
+}
+.second {
+	border-bottom: 2px solid #00c7d6;
+}
+.img {
+	padding: 0;
+}
+img {
+	width: 100%;
+}
+.tag [class *= "col"] {
+	width: 20%;
+}
+.tag img {
+	padding-bottom: 10px;
+}
+.topBorder {
+	border-top: 2px solid #dedede;
+	margin: 0 10px;
+}
+.分栏 [class *= "col"] {
+	padding: 10px;
+}
+h5 {
+	margin: 0;
+	margin-top: 5px;
+}
+.分栏 .border {
+	border-left: 2px solid #dedede;
+	border-right: 2px solid #dedede;
+}
+.div1 {
+	border-top: 5px solid #dedede;
+}
+.no-sidePadding {
+	padding-left: 0;
+	padding-right: 0;
+}
+.no-padding {
+	padding: 0;
+}
+.no-sidePadding .col-xs-4 {
+	width: 37.5%;
+}
+.text {
+	padding: 3.4% 0;
+	margin: 4.4% 0 4.4% 4.4%;
+	height: 50%;
+}
+.topMargin {
+	margin-top: 0;
+}
+.bottomMargin {
+	margin-top: auto;
+	margin-bottom: 0;
+}
+.sideMargin {
+	margin: 0 10px;
+}
+.articleDiv {
+	margin: 10px;
+	padding: 0px;
+}
+.articleImg {
+	padding-right: 5px;
+}
+.captionSrc {
+	position: relative;
+	top: 10px;
+}
+.div2 {
+	border-top: 2px solid #dedede;
+}
+.no-relative {
+	position: static;
+}
