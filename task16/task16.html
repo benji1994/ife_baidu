@@ -31,11 +31,11 @@
 		div.insertBefore(numDiv,firstChild);
 	}
 	function leftOut() {
-		var value = getValue();
-
 		var firstChild = div.firstChild;
-		div.removeChild(firstChild);
-
+		var num = firstChild.firstChild.nodeValue;
+		if(confirm("删除左侧 " + num + " ?")) {
+			div.removeChild(firstChild);
+		}
 	}
 	function rightIn() {
 		var value = getValue();
@@ -45,11 +45,11 @@
 		div.appendChild(numDiv);
 	}
 	function rightOut() {
-		var value = getValue();
-
 		var lastChild = div.lastChild;
-		div.removeChild(lastChild);
-
+		var num = lastChild.firstChild.nodeValue;
+		if(confirm("删除右侧 " + num + " ?")) {
+			div.removeChild(lastChild);
+		}
 	}
 	function initNumDiv() {
 		var numDiv = document.createElement("div");
@@ -69,7 +69,10 @@
 		return numDiv;
 	}
 	function remove() {
-		div.removeChild(this);
+		var num = this.firstChild.nodeValue;
+		if(confirm("删除 " + num + " ?")) {
+			div.removeChild(this);
+		}
 	}
 	function init() {
 		var button1 = document.getElementById("button1");
