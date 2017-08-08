@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>任务六：基础JavaScript练习（三）</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<div style="text-align: center;">
+		<textarea></textarea>
+		<input type="button" name="" value="输入" id="enter" />
+		<input type="text" name="" id="text" />
+		<input type="button" name="" value="查询" id="search" />
+	</div>
+	<div id="list" style="text-align: center;"></div>
+
+	<script type="text/javascript">
+		var div = document.getElementById("list");
+
+		function getString() {
+			var textarea = document.getElementsByTagName("textarea")[0];
+
+			var string = textarea.value;
+			var trimedStr = string.trim();
+			
+			if(trimedStr.length) {
+				var pattern = /\s+/g;
+				var matches = trimedStr.split(pattern);
+				
+				return matches;
+			} else {
+				alert("请插入中文、英文、数字，并且以回车、空格、制表符或顿号间隔！");
+			}
+		}
+		function initNumDiv() {
+			var numDiv = document.createElement("div");
+		
+			numDiv.style.textAlign = "center";
+			numDiv.style.verticalAlign = "middle";
+			numDiv.style.color = "white";
+			numDiv.style.backgroundColor = "red";
+			numDiv.style.display = "inline-block";
+			numDiv.style.margin = "10px";
+			numDiv.style.padding = "10px";
+
+			numDiv.onclick = remove;
+
+			return numDiv;
+		}
+		function add() {
+			var string = getString();
+
+			if(string === undefined) {
+				return;
+			}
+
+			string.forEach(function (item, index, arr) {
+				var numDiv = initNumDiv();
+				numDiv.innerHTML = item;
+				div.appendChild(numDiv);
+			});
+		}
+		function remove() {
+			var num = this.firstChild.nodeValue;
+			if(confirm("删除 " + num + " ?")) {
+				div.removeChild(this);
+			}
+		}
+		function getText() {
+			var text = document.getElementById("text");
+			var stringTxt = text.value;
+			var trimedTxt = stringTxt.trim();
+
+			var pattern = /\s+/g;
+
+			if(trimedTxt.length !== 0 || pattern.test(trimedTxt)) {
+				return trimedTxt;
+			} else {
+				alert("请输入有效字符！（中文、英文、数字）")
+			}
+		}
+		function query() {
+			var shortStr = getText();
+
+			if(shortStr === undefined) {
+				return;
+			}
+
+			var nodes = div.childNodes;
+
+			nodes.forEach(function (item, index, arr) {
+				var longStr = item.firstChild.nodeValue;
+				var pos = longStr.search(shortStr)
+				if (pos !== -1) {
+					item.style.backgroundColor = "green";
+				} else　{
+					item.style.backgroundColor = "red";
+				}　
+			});
+		}
+		function init() {
+			var enter = document.getElementById("enter");
+			enter.onclick = add;
+
+			var search = document.getElementById("search");
+			search.onclick = query;
+		}
+
+		init();
+	</script>
+</body>
+</html>
