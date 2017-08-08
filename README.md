@@ -15,7 +15,7 @@ HTML和CSS
 <a href="https://lessismore1994.github.io/ife_baidu/task08/task8.html">task08</a>
 <a href="https://lessismore1994.github.io/ife_baidu/task09/task9.html">task09</a>
 <a href="https://lessismore1994.github.io/ife_baidu/task10/task10.html">task10</a>
-<a href="https://lessismore1994.github.io/ife_baidu/task11/task11.html">task11</a>
+<a href="https://lessismore1994.github.io/ife_baidu/task11/flex/flex.html">task11</a>
 <a href="https://lessismore1994.github.io/ife_baidu/task12/task12.html">task12</a>
 <br/>
 JavaScript
