@@ -20,11 +20,11 @@ HTML和CSS
 <br/>
 JavaScript
 <br />
-<a href="https://lessismore1994.github.io/ife_baidu/task13/task1.html">task13</a>
-<a href="https://lessismore1994.github.io/ife_baidu/task14/task2.html">task14</a>
-<a href="https://lessismore1994.github.io/ife_baidu/task15/task3.html">task15</a>
-<a href="https://lessismore1994.github.io/ife_baidu/task16/task4.html">task16</a>
-<a href="https://lessismore1994.github.io/ife_baidu/task17/task5.html">task17</a>
-<a href="https://lessismore1994.github.io/ife_baidu/task18/task6.html">task18</a>
+<a href="https://lessismore1994.github.io/ife_baidu/task13/task13.html">task13</a>
+<a href="https://lessismore1994.github.io/ife_baidu/task14/task14.html">task14</a>
+<a href="https://lessismore1994.github.io/ife_baidu/task15/task15.html">task15</a>
+<a href="https://lessismore1994.github.io/ife_baidu/task16/task16.html">task16</a>
+<a href="https://lessismore1994.github.io/ife_baidu/task17/task17.html">task17</a>
+<a href="https://lessismore1994.github.io/ife_baidu/task18/task18.html">task18</a>
 <br/>
 ... 更新中 ...
