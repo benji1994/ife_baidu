@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>任务八：JavaScript和树（二）</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		#root {
+			width: 1208px;
+			margin: 25px 50px;;
+		}
+		div {
+			border: 1px solid black;
+			padding: 5px;
+			margin: 5px;
+			background-color: white;
+			display: inline-block;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="root">
+		赵
+		<div>
+			钱
+			<div>
+				周
+				<div>冯</div>
+				<div>陈</div>
+				<div>褚</div>
+				<div>卫</div>
+			</div>
+			<div>
+				吴
+			</div>
+			<div>
+				郑
+				<div>蒋</div>
+				<div>沈</div>
+			</div>
+		</div>
+		<div>
+			孙
+			<div>
+				韩
+				<div>朱</div>
+				<div>秦</div>
+				<div>尤</div>
+			</div>
+			<div>
+				杨
+				<div>
+					许
+					<div>吕</div>
+				</div>
+				<div>何</div>
+			</div>
+		</div>
+		<div>
+			李
+		</div>
+	</div>
+	<div style="border: none;width: 100%;text-align: center;">
+		<input style="margin-right: 30px;" type="button" name="" value="遍历" />
+		<input type="text" name="" />
+		<input type="button" name="" value="查询">
+	</div>
+	<script type="text/javascript">
+		function getTreeWalker(id) {
+			var root = document.getElementById(id);
+			var walker = document.createTreeWalker(root, NodeFilter.SHOW_ELEMENT, null, false);
+			return walker;
+		}
+		function reset(node, walker) {
+			if (node === null) return;
+
+			node.style.backgroundColor = "white";
+			node = walker.nextNode();
+			reset(node, walker);
+		}
+		function traversal(node, walker) {
+			if(node === null) return; 
+
+			setTimeout(function() {
+				node.style.backgroundColor = "#0002FC";
+				node = walker.nextNode();
+				traversal(node, walker);
+			}, 500);	
+		}
+		function getText(textBox) {
+			var text = textBox.value.trim();
+			if(text === "") {
+				alert("查询关键字不能为空！");
+				return false;
+			} else {
+				return text;
+			}
+		}
+		function white(walker) {
+			var node = walker.currentNode;
+			node.style.backgroundColor = "white";
+		}
+		function match(text, node, walker) {
+			if (node === null) return;
+
+			node.style.backgroundColor = "#0002FC";
+			var str = node.firstChild.nodeValue.trim();
+			
+			setTimeout(function() {
+				if(str !== text) {
+					white(walker);
+				}
+				node = walker.nextNode();
+				match(text, node, walker);
+			}, 500);	
+			
+		}
+		function init() {
+			var root = document.getElementById("root");
+			var buttons = document.getElementsByTagName("input");
+			var walker = getTreeWalker("root");
+			var node = walker.currentNode;
+
+			buttons[0].onclick = function () {
+				walker.currentNode = node;
+				reset(node, walker);
+				walker.currentNode = node;
+				traversal(node, walker);
+			};
+
+			buttons[2].onclick = function () {
+				walker.currentNode = node;
+				reset(node, walker);
+				var text = getText(buttons[1]);
+				if(text === false) {
+					return;
+				}
+				walker.currentNode = node;
+				match(text, node, walker);
+
+			};
+		}
+
+		init();
+	</script>
+</body>
+</html>

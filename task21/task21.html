@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>任务九：JavaScript和树（三）</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		#root {
+			width: 1208px;
+			margin: 25px 50px;
+		}
+		div {
+			border: 1px solid black;
+			padding: 5px;
+			margin: 5px;
+			background-color: white;
+			display: inline-block;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="root">
+		赵
+		<div>
+			钱
+			<div>
+				周
+				<div>冯</div>
+				<div>陈</div>
+				<div>褚</div>
+				<div>卫</div>
+			</div>
+			<div>
+				吴
+			</div>
+			<div>
+				郑
+				<div>蒋</div>
+				<div>沈</div>
+			</div>
+		</div>
+		<div>
+			孙
+			<div>
+				韩
+				<div>朱</div>
+				<div>秦</div>
+				<div>尤</div>
+			</div>
+			<div>
+				杨
+				<div>
+					许
+					<div>吕</div>
+				</div>
+				<div>何</div>
+			</div>
+		</div>
+		<div>
+			李
+		</div>
+	</div>
+	<div style="border: none;width: 100%;text-align: center;" id="inputs" />
+		<input style="margin-right: 30px;" type="button" value="遍历" id="input1" />
+		<input type="text" id="input2" />
+		<input type="button" value="查询" id="input3" />
+		<input style="margin: 0 30px;" type="button" value="删除" id="input4" />
+		<input type="text" id="input5" />
+		<input type="button" value="添加" id="input6" />
+	</div>
+	<script type="text/javascript">
+		function getTreeWalker(id) {
+			var root = document.getElementById(id);
+			var walker = document.createTreeWalker(root, NodeFilter.SHOW_ELEMENT, null, false);
+			return walker;
+		}
+		function reset(node, walker) {
+			if (node === null) return;
+
+			node.style.backgroundColor = "white";
+			node = walker.nextNode();
+			reset(node, walker);
+		}
+		function traversal(node, walker) {
+			if(node === null) return; 
+
+			setTimeout(function() {
+				node.style.backgroundColor = "blue";
+				node = walker.nextNode();
+				traversal(node, walker);
+			}, 200);	
+		}
+		function getText(id) {
+			var textBox = document.getElementById(id);
+			var text = textBox.value.trim();
+			if(text === "") {
+				alert("查询关键字不能为空！");
+				return false;
+			} else {
+				return text;
+			}
+		}
+		function white(walker) {
+			var node = walker.currentNode;
+			node.style.backgroundColor = "white";
+		}
+		function match(text, node, walker) {
+			if (node === null) return;
+
+			node.style.backgroundColor = "blue";
+			var str = node.firstChild.nodeValue.trim();
+			
+			setTimeout(function() {
+				if(str !== text) {
+					white(walker);
+				}
+				node = walker.nextNode();
+				match(text, node, walker);
+			}, 200);	
+			
+		}
+		function removeNodes(root, target) {
+			alert(root.firstChild.nodeValue);
+			root.removeChild(target);
+		}
+		function getTargetNode(node, walker) {
+			while(node !== null && node.style.backgroundColor !== "blue") {
+				node = walker.nextNode();
+			}
+			return node;
+		}
+		function init() {
+			var root = document.getElementById("root");
+			var inputs = document.getElementById("inputs");
+			var walker = getTreeWalker("root");
+			var node = walker.currentNode;
+			var targetNode=10;
+
+			inputs.onclick = function(event) {
+				var target = event.target;
+				switch(target.id) {
+					case "input1": {
+						walker.currentNode = node;
+						reset(node, walker);
+						walker.currentNode = node;
+						traversal(node, walker);
+						break;
+					}
+					case "input3": {
+						walker.currentNode = node;
+						reset(node, walker);
+						var text = getText("input2");
+						if(text === false) {
+							return;
+						}
+						walker.currentNode = node;
+						match(text, node, walker);
+						break;
+					}
+					case "input4": {
+						walker.currentNode = node;
+						targetNode = getTargetNode(node, walker);
+						targetNode.parentNode.removeChild(targetNode);
+						break;
+					}
+
+					case "input6": {
+						var text = getText("input5");
+						var textNode = document.createTextNode(text);
+						var appendNode = document.createElement("div");
+						appendNode.appendChild(textNode);
+						walker.currentNode = node;
+						targetNode = getTargetNode(node, walker);
+						targetNode.appendChild(appendNode);
+						break;
+					}
+				}
+			}
+			root.onclick = function(event) {
+				walker.currentNode = node;
+				reset(node, walker);
+				event.target.style.backgroundColor = "blue";
+				//targetNode = event.target
+			}
+		}
+
+		init();
+	</script>
+</body>
+</html>

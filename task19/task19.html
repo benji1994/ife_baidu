@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>任务七：JavaScript和树（一）</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		#root {
+			width: 1208px;
+			margin: 25px 50px;
+			display: block;
+		}
+		div {
+			border: 1px solid black;
+			padding: 20px;
+			margin: 5px;
+			float: left;
+			background-color: white;
+		}
+		.minDiv {
+			width: 60px;
+		}
+		input {
+			margin: 10px 30px;
+		}
+	</style>
+</head>
+<body>
+	<div id="root">
+		<div id="A">
+			<div id="B">
+				<div class="minDiv" id="C"></div>
+				<div class="minDiv" id="D"></div>
+			</div>
+			<div id="E">
+				<div class="minDiv" id="F"></div>
+				<div class="minDiv" id="G"></div>
+			</div>
+		</div>
+		<div id="H">
+			<div id="I">
+				<div class="minDiv" id="J"></div>
+				<div class="minDiv" id="K"></div>
+			</div>
+			<div id="L">
+				<div class="minDiv" id="M"></div>
+				<div class="minDiv" id="N"></div>
+			</div>
+		</div>
+	</div>
+	<div style="border: none;width: 100%;text-align: center;">
+		<input type="button" name="" value="先序遍历" />
+		<input type="button" name="" value="中序遍历" />
+		<input type="button" name="" value="后序遍历" />
+	</div>
+	<p></p>
+	<script type="text/javascript">
+		var domList = new Array();
+		function DLR(root) {
+				if(root === null) return; 
+
+				domList.push(root);
+				if(root.firstElementChild !== null) {
+					DLR(root.firstElementChild);
+				}
+				if(root.lastElementChild !== null) {
+					DLR(root.lastElementChild);
+				}
+		}
+		function LDR(root) {
+			if(root === null) return;
+			
+			if(root.firstElementChild !== null) {
+				LDR(root.firstElementChild);
+			}
+			
+			domList.push(root);
+			
+			if(root.lastElementChild !== null) {
+				LDR(root.lastElementChild)
+			}
+		}
+		function LRD(root) {
+			if(root === null) return;
+			
+			if(root.firstElementChild !== null) {
+				LRD(root.firstElementChild);
+			}
+			
+			if(root.lastElementChild !== null) {
+				LRD(root.lastElementChild)
+			}
+			
+			domList.push(root);
+		}
+		function render(root) {
+			var walker = document.createTreeWalker(root, NodeFilter.SHOW_ELEMENT, null, false);
+			node = walker.currentNode;
+			while ( node !== null) {
+				node.style.backgroundColor = "white";
+				node = walker.nextNode();
+			}
+			
+			var intervalId = setInterval(function() {
+				if(domList.length === 0) {
+					clearInterval(intervalId);
+				}
+				domList.shift().style.backgroundColor = "#0002FC";
+			},1000);
+		}
+		function init() {
+			var root = document.getElementById("root");
+			var buttons = document.getElementsByTagName("input");
+
+			buttons[0].onclick = function () {
+				DLR(root);
+				render(root);
+			};
+			buttons[1].onclick = function () {
+				LDR(root);
+				render(root);
+			};
+			buttons[2].onclick = function () {
+				LRD(root);
+				render(root);
+			};
+		}
+
+		init();	
+	</script>
+</body>
+</html>
