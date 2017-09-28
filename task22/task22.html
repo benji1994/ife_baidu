@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>任务一：表单（一）单个表单项的检验</title>
+	<meta charset="utf-8" />
+</head>
+<style type="text/css">
+	form {
+		width: 610px;
+		margin: 40px auto;
+		font: bold 16px 微软雅黑;
+	}
+	label {
+		margin-right: 30px;
+	}
+	input[type="text"] {
+		margin-right: 15px;
+		padding-left: 10px;
+		width: 450px;
+		height: 50px;
+		box-sizing: border-box;
+		border-radius: 5px;
+		border: 2px solid #CCCCCC;
+	}
+	input[type="submit"] {
+		box-sizing: border-box;
+		border-radius: 5px;
+		height: 50px;
+		width: 80px;
+		background-color: #2F79BA;
+		border: 2px solid #296BA7;
+		color: white;
+	}
+	#message {
+		margin-left: 65px; 
+		line-height: 40px;
+		color: #ADADAD;
+	}
+</style>
+<body>
+	<form>
+		<div>
+			<label>名称</label><input type="text" name="text" class="" /><input type="submit" name="validate" value="验证" /><br />
+			<label id="message">必填，长度为4~16个字符</label>
+		</div>
+	</form>
+	<script>
+		function check(txtInput, messLabel) {
+			txt = txtInput.value.trim();
+			var len = getStrLen(txt);
+
+			if(len === 0) {
+				messLabel.innerHTML = "姓名不能为空";
+				messLabel.style.color = "red";
+				txtInput.style.borderColor = "red";
+			} else if( len < 4 || len > 16) {
+				messLabel.innerHTML = "长度须为4~16个字符";
+				messLabel.style.color = "red";
+				txtInput.style.borderColor = "red";
+			} else{
+				messLabel.innerHTML = "格式正确";
+				messLabel.style.color = "#67C158";
+				txtInput.style.borderColor = "#67C158";
+			}
+		}
+
+		function getStrLen (str) {
+        	var enLen = 0;
+        	var zhLen = 0;
+        	for (let ch of str) {
+            	if (isASCII(ch))
+                	enLen++;
+            	else 
+                	zhLen++;
+        	} 
+        	return enLen + zhLen * 2;  
+		}
+
+		function isASCII (c) {
+        	return c.codePointAt(0) <= 0xFF;
+		}
+
+		(function init() {
+			var form = document.getElementsByTagName("form")[0];
+
+			form.onsubmit = function(event) {
+				var target = event.target;
+				
+				var txtInput = target.elements["text"];
+				var messLabel = document.getElementById("message");
+				
+				check(txtInput, messLabel);
+				event.preventDefault();
+			}
+		})();
+	</script>
+</body>
+</html>

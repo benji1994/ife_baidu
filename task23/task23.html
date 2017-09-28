@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>任务二：表单（二）多个表单项的动态校验</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		form {
+			font: 24px 微软雅黑;
+		}
+		input[type="text"] {
+			height: 70px;
+			width: 1000px;
+			box-sizing: border-box;
+			border: 2px solid #ACACAC;
+			border-radius: 8px;
+			margin-left: 30px;
+			padding: 20px;
+			font: 18px 微软雅黑;
+		}
+		div {
+			width: 1080px;
+			margin: 30px auto;
+		}
+		input[type="submit"] {
+			float: right;
+			height: 70px;
+			width: 160px;
+			border: 2px solid #2F79BA;
+			background-color: #2F79BA;
+			border-radius: 8px;
+			font: 24px 微软也黑;
+			color: white;
+		}
+		.msg {
+			font: 18px 微软雅黑;
+			text-indent: 5.5em;
+			margin: 15px auto;
+			color: #ACACAC;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<div>
+			名称<input type="text" name="name" />
+			<div class="msg"></div>
+		</div>
+		<div>
+			密码<input type="text" name="password" />
+			<div class="msg"></div>
+		</div>
+		<div style="text-indent: -2em;">
+			密码确认<input type="text" name="passwordCheck" />
+			<div class="msg"></div>
+		</div>
+		<div>
+			邮箱<input type="text" name="email" />
+			<div class="msg"></div>
+		</div>
+		<div>
+			手机<input type="text" name="telephoneNumber" />
+			<div class="msg"></div>
+		</div>
+		<div><input type="submit" name="" value="提交" /></div>
+	</form>
+	<script type="text/javascript">
+		function hint(e) {
+			var nextDiv = e.nextElementSibling;
+
+			switch(e.name) {
+				case "name": {
+					nextDiv.innerHTML = "名称不能为空";
+					break;
+				}
+				case "password": {
+					nextDiv.innerHTML = "密码不能为空";
+					break;
+				}
+				case "passwordCheck": {
+					nextDiv.innerHTML = "密码须保持一致";
+					break;
+				}
+				case "email": {
+					nextDiv.innerHTML = "邮箱不能为空";
+					break;
+				}
+				case "telephoneNumber": {
+					nextDiv.innerHTML = "手机号不能为空";
+					break;
+				}
+
+			}
+		}
+
+		function checkName(e) {
+			var nextDiv = e.nextElementSibling;
+				
+			if(e.value.trim() === "") {
+				nextDiv.innerHTML = "名称不能为空";
+				nextDiv.style.color = "red";
+				e.style.border = "2px solid red";
+
+				return false;
+			} 
+					
+			nextDiv.innerHTML = "名称正确";
+			nextDiv.style.color = "#5EC550";
+			e.style.border = "2px solid #5EC550";
+
+			return true;
+
+		}
+
+		function checkPassword(e) {
+			var nextDiv = e.nextElementSibling;
+
+				if(e.value.trim() === "") {
+					nextDiv.innerHTML = "密码不能为空";
+					nextDiv.style.color = "red";
+					e.style.border = "2px solid red";
+
+					return false;
+				}
+					
+				nextDiv.innerHTML = "密码可用";
+				nextDiv.style.color = "#5EC550";
+				e.style.border = "2px solid #5EC550";
+
+				return true;
+		}
+
+		function checkPasswordCheck(e) {
+			var nextDiv = e.nextElementSibling;
+
+			if(e.value === "") {
+				nextDiv.innerHTML = "密码不能为空";
+				nextDiv.style.color = "red";
+				e.style.border = "2px solid red";
+				
+				return false;
+			}
+
+			if(e.value !== document.getElementsByTagName("input")[1].value) {
+				nextDiv.innerHTML = "密码不一致";
+				nextDiv.style.color = "red";
+				e.style.border = "2px solid red";
+
+				return false;
+			}
+
+			nextDiv.innerHTML = "密码可用";
+			nextDiv.style.color = "#5EC550";
+			e.style.border = "2px solid #5EC550";
+
+			return true;
+		}
+
+		function checkEmailCheck(e) {
+			var nextDiv = e.nextElementSibling;
+
+			var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
+			if(!reg.test(e.value)) {
+				nextDiv.innerHTML = "邮箱不可用";
+				nextDiv.style.color = "red";
+				e.style.border = "2px solid red";
+
+				return false;
+			} else {
+				nextDiv.innerHTML = "邮箱可用";
+				nextDiv.style.color = "#5EC550";
+				e.style.border = "2px solid #5EC550";
+
+				return true;
+			}
+		}
+
+		function checkTelephoneNumberCheck(e) {
+			var nextDiv = e.nextElementSibling;
+
+			var reg = /^1[3|4|5|8][0-9]\d{4,8}$/; 
+			if(!reg.test(e.value)) {
+				nextDiv.innerHTML = "手机号码无效";
+				nextDiv.style.color = "red";
+				e.style.border = "2px solid red";
+
+				return false;
+			} else {
+				nextDiv.innerHTML = "手机号码正确";
+				nextDiv.style.color = "#5EC550";
+				e.style.border = "2px solid #5EC550";
+
+				return true;
+			}
+		}
+		(function() {
+			var form = document.getElementsByTagName("form")[0];
+
+			var inputs = new Array();
+			inputs.push(form.elements["name"]);
+			inputs.push(form.elements["password"]);
+			inputs.push(form.elements["passwordCheck"]);
+			inputs.push(form.elements["email"]);
+			inputs.push(form.elements["telephoneNumber"]);
+			inputs.forEach(function(item, index, array) {
+				item.onfocus = function() {
+					hint(this);
+				}
+				switch(item.name) {
+					case "name": {
+						item.onblur = function() {
+							checkName(this);
+						}
+						break;
+					}
+					case "password": {
+						item.onblur = function() {
+							checkPassword(this);
+						}
+						break;
+					}
+					case "passwordCheck": {
+						item.onblur = function() {
+							checkPasswordCheck(this);
+						}
+						break;
+					}
+					case "email": {
+						item.onblur = function() {
+							checkEmailCheck(this);
+						}
+						break;
+					}
+					case "telephoneNumber": {
+						item.onblur = function() {
+							checkTelephoneNumberCheck(this);
+						}
+						break;
+					}
+				}
+			});
+
+			form.onsubmit = function(event) {
+				var c1 = checkName(inputs[0]);
+				var c2 = checkPassword(inputs[1]);
+				var c3 = checkPasswordCheck(inputs[2]);
+				var c4 = checkEmailCheck(inputs[3]);
+				var c5 = checkTelephoneNumberCheck(inputs[4]);
+
+				if(c1 && c2 && c3 && c4 && c5) {
+					alert("输入正确。");
+				} else {
+					alert("输入有误！");
+					event.preventDefault();
+				}
+			}
+		})();
+	</script>
+</body>
+</html>
