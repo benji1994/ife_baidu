@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>任务三：表单（三）联动</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body {
+			padding: 100px;
+		}
+		input {
+			margin-left: 100px;
+			margin-bottom: 30px;
+		}
+		select {
+			width: 100px;
+		}
+
+	</style>
+</head>
+<body>
+	<center>
+		<form>
+			<input type="radio" name="one" id="leftRadio"><label for="leftRadio">在校生</label>
+			<input type="radio" name="one" id="rightRadio"><label for="rightRadio">非在校生</label>
+			<div></div>
+		</form>
+	</center>
+
+	<script type="text/javascript">
+		var form = document.forms[0];
+		var leftRadio = form.elements[0];
+		var rightRadio = form.elements[1];
+
+		function initSel1() {
+			var select = document.createElement("select");
+			var newOption = document.createElement("option");
+			newOption.appendChild(document.createTextNode("未选择"));
+			select.appendChild(newOption);
+			
+			for(var i = 0;i < 3;i ++) {
+				var newOption = document.createElement("option");
+				newOption.appendChild(document.createTextNode("城市"+i));
+				select.appendChild(newOption);
+			}
+
+			return select;
+		}
+		function addOption(select1, select2) {
+			select2.innerHTML = "";
+
+			switch(select1.selectedIndex) {
+				case 1: {
+					for(var i = 0;i < 5;i ++) {
+						var newOption = document.createElement("option");
+						newOption.appendChild(document.createTextNode("大学"+i));
+						select2.appendChild(newOption);
+					}
+					break;
+				}
+				case 2: {
+					for(var i = 0;i < 5;i ++) {
+						var newOption = document.createElement("option");
+						newOption.appendChild(document.createTextNode("学院"+i));
+						select2.appendChild(newOption);
+					}
+					break;
+				}
+				case 3: {
+					for(var i = 0;i < 5;i ++) {
+						var newOption = document.createElement("option");
+						newOption.appendChild(document.createTextNode("大专"+i));
+						select2.appendChild(newOption);
+					}
+					break;
+				}
+			}
+		}
+		function init1() {
+			var div = document.getElementsByTagName("div")[0];
+			div.innerHTML = "";
+
+			var txt = document.createTextNode("学校");
+			var label = document.createElement("label");
+			label.appendChild(txt);
+
+			var select1 = initSel1();
+			div.appendChild(label);
+			div.appendChild(select1);
+			
+			var select2 = document.createElement("select");
+			select2.style.position = "relative";
+			select2.style.left = "50px";
+			select2.style.width = "150px";
+			div.appendChild(select2);
+
+			select1.onchange = function() {
+				addOption(this, select2); 
+			}
+		}
+
+		function init2() {
+			var div = document.getElementsByTagName("div")[0];
+			div.innerHTML = "";
+
+			var txt = document.createTextNode("就业单位");
+			var label = document.createElement("label");
+			label.appendChild(txt);
+
+			var inputText = document.createElement("input");
+			inputText.type = "text";
+
+			div.appendChild(txt);
+			div.appendChild(inputText);
+
+		}
+
+		leftRadio.onfocus = function () {
+			init1();
+		}
+
+		rightRadio.onfocus = function() {
+			init2();
+		}
+
+
+	</script>
+</body>
+</html>
